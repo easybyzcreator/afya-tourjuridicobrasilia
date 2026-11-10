@@ -270,9 +270,9 @@ export default function App() {
         </div>
       </header>
 
-      {/* Main Slide Presentation Stage */}
+      {/* Main Slide Presentation Stage (Hidden in clean print) */}
       <main 
-        className="flex-1 flex items-center justify-center p-1 sm:p-3 md:p-4 relative overflow-y-auto"
+        className="flex-1 flex items-center justify-center p-1 sm:p-3 md:p-4 relative overflow-y-auto print:hidden"
         onMouseMove={handleMouseMove}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
@@ -467,10 +467,10 @@ export default function App() {
         </div>
       )}
 
-      {/* Hidden Print Container: Formats all 17 slides sequentially when printing / exporting to PDF */}
-      <div className="hidden print:block space-y-8 p-4">
+      {/* Dedicated Print View: Formats all 18 slides sequentially as 1 slide per page */}
+      <div className="hidden print:block print-deck w-full">
         {SLIDES_DATA.map((s) => (
-          <div key={s.id} className="page-break-after aspect-video w-full mb-8 border border-slate-300 rounded-xl overflow-hidden">
+          <div key={s.id} className="print-slide-page">
             <SlideViewer slide={s} />
           </div>
         ))}

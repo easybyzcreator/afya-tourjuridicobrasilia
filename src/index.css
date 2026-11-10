@@ -1,1 +1,93 @@
 @import "tailwindcss";
+
+@media print {
+  @page {
+    size: landscape;
+    margin: 0;
+  }
+
+  *,
+  *::before,
+  *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  html,
+  body {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Hide all presentation chrome and interactive elements in print */
+  header,
+  footer,
+  main,
+  nav,
+  aside,
+  button,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  /* Print Deck: wraps all 18 slides sequentially */
+  .print-deck {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Each slide is an isolated, full-page landscape sheet */
+  .print-slide-page {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 6mm 8mm !important;
+    background-color: #ffffff !important;
+  }
+
+  .print-slide-page:last-child {
+    page-break-after: auto !important;
+    break-after: auto !important;
+  }
+
+  /* Slide card styling during print: perfectly scaled 16:9 presentation slide */
+  .print-slide-page > div {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    aspect-ratio: 16 / 9 !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 12px !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+  }
+
+  /* Remove all browser scrollbars completely in print */
+  .print-slide-page * {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+
+  .print-slide-page *::-webkit-scrollbar {
+    display: none !important;
+  }
+}

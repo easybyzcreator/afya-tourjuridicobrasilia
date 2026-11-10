@@ -70,7 +70,7 @@ export const SlideViewer: React.FC<SlideViewerProps> = ({ slide, onCopyCode, isC
   };
 
   return (
-    <div ref={containerRef} className="relative w-full h-full md:aspect-video bg-white overflow-y-auto md:overflow-hidden shadow-2xl rounded-2xl sm:rounded-3xl border border-slate-200 select-none flex flex-col justify-between scrollbar-thin">
+    <div ref={containerRef} className="relative w-full h-full md:aspect-video bg-white overflow-y-auto md:overflow-hidden shadow-2xl rounded-2xl sm:rounded-3xl border border-slate-200 select-none flex flex-col justify-between scrollbar-thin print:aspect-video print:overflow-hidden print:border-none print:shadow-none print:rounded-none print:h-full print:w-full">
       {/* Hidden File Input for video loading */}
       <input 
         type="file" 
