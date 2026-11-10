@@ -158,19 +158,20 @@ function renderSlideContent(
     // SLIDE 1: CAPA
     case 'cover':
       return (
-        <div className="relative w-full h-full bg-white text-slate-900 p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-hidden">
-          {/* Full-bleed background occupying the entire slide */}
-          <div className="absolute inset-0 z-0 bg-white flex items-center justify-center overflow-hidden">
+        <div className="relative w-full h-full bg-slate-50 text-slate-900 p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-hidden">
+          {/* Subtle fumê / soft warm gradient effect positioned UNDERNEATH the image */}
+          <div className="absolute inset-0 z-0 bg-linear-to-br from-amber-50/90 via-emerald-50/50 to-slate-100" />
+          <div className="absolute inset-0 z-1 bg-linear-to-r from-[#083904]/15 via-[#083904]/5 to-amber-500/15 pointer-events-none" />
+
+          {/* Central Transparent Identity Logo - Scaled by 160% (+60%) as requested */}
+          <div className="absolute inset-0 z-2 flex items-center justify-center pointer-events-none overflow-hidden">
             <img 
-              src="https://raw.githubusercontent.com/easybyzcreator/imagens/36d7185c2ac23ae917c8191c57809f9dae0515cd/Identidade%20Jornada%20Jur%C3%ADdica%20-%20Laranja%20UL.jpg.jpeg" 
+              src="https://raw.githubusercontent.com/easybyzcreator/imagens/cec06ab3f042f632d43c9b429d4382d5fc41a5d9/jornada%20brasilia%20fundo%20transp.png" 
               alt="Jornada Jurídica Brasília" 
               referrerPolicy="no-referrer"
-              className="w-full h-full object-contain p-2 sm:p-4 object-center" 
+              className="w-full h-full max-h-[90%] object-contain object-center drop-shadow-sm scale-[1.60] transform" 
             />
           </div>
-
-          {/* Frosted / Fosco overlay covering the entire slide */}
-          <div className="absolute inset-0 z-1 bg-linear-to-r from-[#083904]/20 via-[#083904]/10 to-amber-500/15 backdrop-blur-[1.5px] pointer-events-none" />
 
           {/* Top Tag & Location - Compact so it never overlaps the background artwork */}
           <div className="relative z-10 flex flex-wrap items-center justify-between gap-2 shrink-0">
