@@ -56,12 +56,12 @@ export const PWAInstallButton: React.FC = () => {
 
               <div className="flex items-center gap-3 mb-4">
                 <img 
-                  src="https://i.ibb.co/35r0pnwm/PWA-BSB.png" 
-                  alt="Tour juridico Brasília - UNIFIO" 
+                  src="https://raw.githubusercontent.com/easybyzcreator/imagens/7695f8348fd3705d57b106f8eed779cf16e9fa56/pwa%20-%20jornada%20juridica%20-%20apresentacao.png" 
+                  alt="Tour Jurídico Brasília - AFYA" 
                   className="w-12 h-12 rounded-2xl border border-[#f59532]/40 shadow-sm"
                 />
                 <div>
-                  <h3 className="text-base font-black text-white">Tour juridico Brasília - UNIFIO</h3>
+                  <h3 className="text-base font-black text-white">Tour Jurídico Brasília - AFYA</h3>
                   <p className="text-xs text-slate-400">Instalação no iPhone / iPad</p>
                 </div>
               </div>
@@ -113,19 +113,19 @@ export const PWAInstallButton: React.FC = () => {
 
             <div className="flex items-center gap-3 mb-4">
               <img 
-                src="https://i.ibb.co/35r0pnwm/PWA-BSB.png" 
-                alt="Tour juridico Brasília - UNIFIO" 
+                src="https://raw.githubusercontent.com/easybyzcreator/imagens/7695f8348fd3705d57b106f8eed779cf16e9fa56/pwa%20-%20jornada%20juridica%20-%20apresentacao.png" 
+                alt="Tour Jurídico Brasília - AFYA" 
                 className="w-12 h-12 rounded-2xl border border-[#f59532]/40 shadow-sm"
               />
               <div>
-                <h3 className="text-base font-black text-white">Tour juridico Brasília - UNIFIO</h3>
+                <h3 className="text-base font-black text-white">Tour Jurídico Brasília - AFYA</h3>
                 <p className="text-xs text-slate-400">Instalar Aplicativo</p>
               </div>
             </div>
 
             <div className="space-y-3 text-xs text-slate-300 bg-slate-950 p-4 rounded-2xl border border-slate-800">
               <p>
-                Para instalar o app <strong>Tour juridico Brasília - UNIFIO</strong>:
+                Para instalar o app <strong>Tour Jurídico Brasília - AFYA</strong>:
               </p>
               <ul className="list-disc pl-4 space-y-1 text-slate-400">
                 <li>No Chrome ou Edge, clique no ícone de instalar na barra de endereços (ao lado da estrela de favoritos).</li>

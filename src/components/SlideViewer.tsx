@@ -158,62 +158,55 @@ function renderSlideContent(
     // SLIDE 1: CAPA
     case 'cover':
       return (
-        <div className="relative w-full h-full bg-[#120a02] text-white p-5 sm:p-8 md:p-12 flex flex-col justify-between overflow-hidden">
-          {/* Background Brasília Monument with reduced orange overlay so the photo stands out crisply */}
-          <div className="absolute inset-0 z-0">
+        <div className="relative w-full h-full bg-white text-slate-900 p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-hidden">
+          {/* Full-bleed background occupying the entire slide */}
+          <div className="absolute inset-0 z-0 bg-white flex items-center justify-center overflow-hidden">
             <img 
-              src="https://i.ibb.co/96zqmSG/bsb.png" 
-              alt="Brasília" 
+              src="https://raw.githubusercontent.com/easybyzcreator/imagens/36d7185c2ac23ae917c8191c57809f9dae0515cd/Identidade%20Jornada%20Jur%C3%ADdica%20-%20Laranja%20UL.jpg.jpeg" 
+              alt="Jornada Jurídica Brasília" 
               referrerPolicy="no-referrer"
-              className="w-full h-full object-cover object-center opacity-85" 
+              className="w-full h-full object-contain p-2 sm:p-4 object-center" 
             />
-            {/* Lighter, softer warm tint to reveal the background photo */}
-            <div className="absolute inset-0 bg-linear-to-r from-[#f59532]/45 via-[#f59532]/30 to-[#083904]/40 backdrop-brightness-95"></div>
-            <div className="absolute inset-0 bg-black/15"></div>
           </div>
-          <div className="absolute -right-20 -bottom-20 w-96 h-96 bg-[#083904]/30 rounded-full blur-3xl pointer-events-none z-0"></div>
 
-          {/* Top Tag */}
-          <div className="relative z-10 flex flex-wrap items-center justify-between gap-2">
-            <div className="bg-[#083904] text-white font-bold px-3.5 sm:px-5 py-2 rounded-xl sm:rounded-2xl shadow-lg flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 border border-emerald-600/40">
-              <div className="flex items-center gap-1.5 sm:gap-2">
-                <span className="text-[10px] sm:text-xs uppercase tracking-wider font-extrabold text-[#f59532]">DATA DA VIAGEM:</span>
-                <span className="text-xs sm:text-base md:text-lg font-black text-white">a definir</span>
-              </div>
-              <span className="hidden sm:inline text-emerald-500 font-bold">•</span>
-              <span className="text-[11px] sm:text-sm md:text-base font-black text-amber-300">11 a 14 de abril</span>
+          {/* Frosted / Fosco overlay covering the entire slide */}
+          <div className="absolute inset-0 z-1 bg-linear-to-r from-[#083904]/20 via-[#083904]/10 to-amber-500/15 backdrop-blur-[1.5px] pointer-events-none" />
+
+          {/* Top Tag & Location - Compact so it never overlaps the background artwork */}
+          <div className="relative z-10 flex flex-wrap items-center justify-between gap-2 shrink-0">
+            <div className="bg-[#083904] text-white font-bold px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-lg sm:rounded-xl shadow-md flex items-center gap-1.5 border border-emerald-600/40">
+              <span className="text-[9px] sm:text-[11px] uppercase tracking-wider font-extrabold text-[#f59532]">DATA DA VIAGEM:</span>
+              <span className="text-[10px] sm:text-xs md:text-sm font-black text-amber-300">11 a 14 de abril</span>
             </div>
-            <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-[#083904] bg-white/95 px-3 py-1 rounded-full shadow-xs">
+            <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-[#083904] bg-white/95 px-3 py-1 rounded-full shadow-xs border border-slate-200">
               Brasília – DF
             </span>
           </div>
 
-          {/* Center Titles */}
-          <div className="relative z-10 max-w-3xl my-auto py-2 sm:py-4">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tight text-white leading-tight drop-shadow-lg">
-              Tour Jurídico <br />
-              <span className="text-amber-200">em Brasília.</span>
-            </h1>
+          {/* Center spacer leaving the central logo artwork fully unobstructed */}
+          <div className="relative z-10 flex-1" />
 
-            <div className="mt-4 sm:mt-6 flex items-center gap-3 sm:gap-4 bg-[#083904]/90 backdrop-blur-xs p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-emerald-500/40 max-w-xl shadow-2xl">
-              <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-white/10 border border-[#f59532]/60 flex items-center justify-center shrink-0">
-                <Scale className="w-5 h-5 sm:w-6 sm:h-6 text-[#f59532]" />
+          {/* Bottom Row: Logos enclosed in matching green tag on the left, Imersão Acadêmica on the right */}
+          <div className="relative z-10 flex flex-wrap items-end justify-between gap-3 pt-2 shrink-0">
+            {/* Logos in a matching green background tag */}
+            <div className="bg-[#083904] px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl sm:rounded-2xl border border-emerald-500/40 shadow-lg flex items-center gap-3 sm:gap-4 shrink-0">
+              <div className="transition-transform hover:scale-105">
+                <UniversoLudicoLogo className="h-7 sm:h-9 md:h-10 drop-shadow-sm" />
               </div>
-              <div>
-                <span className="text-sm sm:text-lg font-bold text-white block">Imersão Acadêmica</span>
-                <span className="text-xs sm:text-sm font-medium text-amber-100">{slide.subtitle}</span>
+              <div className="h-5 sm:h-6 w-px bg-white/20" />
+              <div className="transition-transform hover:scale-105">
+                <PatiTourLogo className="h-6 sm:h-8 md:h-9 drop-shadow-sm" />
               </div>
             </div>
-          </div>
 
-          {/* Footer Logos: Both Universo Lúdico and Pati Tour on the bottom left side */}
-          <div className="relative z-10 flex items-center justify-between pt-3 sm:pt-4 border-t border-white/20">
-            <div className="flex items-center gap-4 sm:gap-6 h-12 sm:h-16 md:h-20">
-              <div className="transition-transform hover:scale-105">
-                <UniversoLudicoLogo className="h-10 sm:h-14 md:h-18 drop-shadow-xl" />
+            {/* Imersão Acadêmica tag in the bottom-right corner */}
+            <div className="bg-[#083904] text-white p-2 sm:p-2.5 px-3 sm:px-4 rounded-xl sm:rounded-2xl border border-emerald-500/40 shadow-lg flex items-center gap-2 sm:gap-3 max-w-xs sm:max-w-sm shrink-0">
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white/10 border border-[#f59532]/60 flex items-center justify-center shrink-0">
+                <Scale className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#f59532]" />
               </div>
-              <div className="transition-transform hover:scale-105">
-                <PatiTourLogo className="h-9 sm:h-12 md:h-16 drop-shadow-xl" />
+              <div>
+                <span className="text-xs sm:text-sm font-bold text-white block leading-tight">Imersão Acadêmica</span>
+                <span className="text-[10px] sm:text-[11px] font-medium text-amber-100 block leading-tight">{slide.subtitle}</span>
               </div>
             </div>
           </div>
@@ -255,7 +248,7 @@ function renderSlideContent(
               {/* Photo 1: Congresso Nacional */}
               <div className="relative h-24 sm:h-28 md:h-32 rounded-xl sm:rounded-2xl overflow-hidden shadow-md group">
                 <img 
-                  src="https://i.ibb.co/96zqmSG/bsb.png" 
+                  src="https://raw.githubusercontent.com/easybyzcreator/imagens/7695f8348fd3705d57b106f8eed779cf16e9fa56/congresso%20bsb.jpg" 
                   alt="Congresso Nacional e Esplanada" 
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
@@ -268,7 +261,7 @@ function renderSlideContent(
               {/* Photo 2: Supremo Tribunal Federal e TSE */}
               <div className="relative h-24 sm:h-28 md:h-32 rounded-xl sm:rounded-2xl overflow-hidden shadow-md group">
                 <img 
-                  src="https://i.ibb.co/W4Xttw8k/patitour-email-18.png" 
+                  src="https://raw.githubusercontent.com/easybyzcreator/imagens/7695f8348fd3705d57b106f8eed779cf16e9fa56/supremo%20tribunal%20federal%20bsb.jpg" 
                   alt="Supremo Tribunal Federal e TSE" 
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
@@ -287,7 +280,7 @@ function renderSlideContent(
         </div>
       );
 
-    // SLIDE 3: FOTO REAL TURMA STJ / STF (Restaurado conforme Imagem 2)
+    // SLIDE 3: FOTO REAL TURMA STJ / STF (Flavio Dino)
     case 'stj_photo':
       return (
         <div className="relative w-full h-full bg-white flex flex-col justify-between p-3.5 sm:p-6 md:p-8 overflow-y-auto md:overflow-hidden">
@@ -306,13 +299,10 @@ function renderSlideContent(
           {/* Group Real Photo - Full clear view of students */}
           <div className="relative flex-1 min-h-[190px] sm:min-h-[280px] md:min-h-0 my-2 sm:my-2.5 rounded-2xl overflow-hidden border-2 border-slate-200 shadow-lg bg-slate-900 flex items-center justify-center">
             <img 
-              src="/stj_turma_hd.jpg" 
-              alt="Turma de Direito no Supremo Tribunal Federal" 
+              src="https://raw.githubusercontent.com/easybyzcreator/imagens/7695f8348fd3705d57b106f8eed779cf16e9fa56/flavio%20dino%20bsb.jpeg" 
+              alt="Turma de Direito com Ministro Flávio Dino no Supremo Tribunal Federal" 
+              referrerPolicy="no-referrer"
               className="w-full h-full object-cover object-[center_55%] transition-transform duration-300 hover:scale-101"
-              style={{ imageRendering: 'auto' }}
-              onError={(e) => {
-                (e.target as HTMLImageElement).src = '/stj_turma.jpg';
-              }}
             />
           </div>
 
@@ -336,7 +326,7 @@ function renderSlideContent(
         </div>
       );
 
-    // SLIDE 4: POR QUE BRASÍLIA FAZ SENTIDO (Restaurado conforme Imagem 2)
+    // SLIDE 4: POR QUE BRASÍLIA FAZ SENTIDO (STF)
     case 'why_brasilia':
       return (
         <div className="relative w-full h-full bg-white p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-y-auto md:overflow-hidden">
@@ -367,12 +357,12 @@ function renderSlideContent(
           {/* Bottom Section: Full Horizontal Photo Container with Badge */}
           <div className="relative w-full h-44 sm:h-56 md:h-64 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg border-2 border-slate-200 bg-slate-900 flex items-center justify-center group">
             <img 
-              src="/stf_plenario_hd.jpg" 
+              src="https://raw.githubusercontent.com/easybyzcreator/imagens/7695f8348fd3705d57b106f8eed779cf16e9fa56/stf%20bsb.jpeg" 
               alt="STF e Tribunais Superiores - Supremo Tribunal Federal" 
-              className="w-full h-full object-cover object-[center_35%] transition-transform duration-500 group-hover:scale-101"
-              style={{ imageRendering: 'auto' }}
+              referrerPolicy="no-referrer"
+              className="w-full h-full object-cover object-[center_52%] transition-transform duration-500 group-hover:scale-101"
             />
-            <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/20 to-transparent flex items-end justify-between p-3 sm:p-4 z-10">
+            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/15 to-transparent flex items-end justify-between p-3 sm:p-4 z-10">
               <div>
                 <span className="inline-block bg-[#f59532] text-slate-950 text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full mb-1 shadow-xs">
                   Imersão Prática
@@ -505,7 +495,7 @@ function renderSlideContent(
                 </span>
                 <div className="h-24 sm:h-28 md:h-32 rounded-xl sm:rounded-2xl overflow-hidden shadow-md relative mb-2 sm:mb-3">
                   <img 
-                    src="https://i.ibb.co/96zqmSG/bsb.png" 
+                    src="https://raw.githubusercontent.com/easybyzcreator/imagens/7695f8348fd3705d57b106f8eed779cf16e9fa56/congresso%20bsb.jpg" 
                     alt="Congresso Nacional" 
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" 
@@ -528,7 +518,7 @@ function renderSlideContent(
                 </span>
                 <div className="h-24 sm:h-28 md:h-32 rounded-xl sm:rounded-2xl overflow-hidden shadow-md relative mb-2 sm:mb-3">
                   <img 
-                    src="https://i.ibb.co/W4GwcP9F/Capa-para-facebook-frase-motivacional-minimalista-preto-e-branco-14.png" 
+                    src="https://raw.githubusercontent.com/easybyzcreator/imagens/7695f8348fd3705d57b106f8eed779cf16e9fa56/catedral%20bsb.jpg" 
                     alt="Catedral Metropolitana" 
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" 
@@ -551,10 +541,10 @@ function renderSlideContent(
                 </span>
                 <div className="h-24 sm:h-28 md:h-32 rounded-xl sm:rounded-2xl overflow-hidden shadow-md relative mb-2 sm:mb-3">
                   <img 
-                    src="https://i.ibb.co/39myYhkG/Capa-para-facebook-frase-motivacional-minimalista-preto-e-branco-15.png" 
+                    src="https://raw.githubusercontent.com/easybyzcreator/imagens/7695f8348fd3705d57b106f8eed779cf16e9fa56/oab%20bsb.png" 
                     alt="Conselho Federal da OAB" 
                     referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" 
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent flex items-end p-2 sm:p-2.5">
                     <span className="text-[11px] sm:text-xs font-bold text-white">Conselho Federal da OAB</span>
@@ -821,7 +811,7 @@ function renderSlideContent(
           <div className="relative flex-1 min-h-[220px] sm:min-h-[240px] md:min-h-0 my-2.5 sm:my-3 grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3">
             <div className="relative h-48 sm:h-full rounded-xl sm:rounded-2xl overflow-hidden border-2 border-slate-200 shadow-md group">
               <img 
-                src="https://i.ibb.co/WvWk9nSG/Whats-App-Image-2026-09-17-at-2-57-55-PM.jpg" 
+                src="https://raw.githubusercontent.com/easybyzcreator/imagens/7695f8348fd3705d57b106f8eed779cf16e9fa56/WhatsApp%20Image%202026-09-17%20at%202.57.55%20PM.jpeg" 
                 alt="Bay Park Flat Hotel - Quarto" 
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
@@ -829,7 +819,7 @@ function renderSlideContent(
             </div>
             <div className="relative h-48 sm:h-full rounded-xl sm:rounded-2xl overflow-hidden border-2 border-slate-200 shadow-md group">
               <img 
-                src="https://i.ibb.co/MD42xxvR/Whats-App-Image-2026-09-17-at-2-58-05-PM.jpg" 
+                src="https://raw.githubusercontent.com/easybyzcreator/imagens/7695f8348fd3705d57b106f8eed779cf16e9fa56/WhatsApp%20Image%202026-09-17%20at%202.58.05%20PM.jpeg" 
                 alt="Bay Park Flat Hotel - Flat e Sala" 
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
@@ -837,7 +827,7 @@ function renderSlideContent(
             </div>
             <div className="relative h-48 sm:h-full rounded-xl sm:rounded-2xl overflow-hidden border-2 border-slate-200 shadow-md group">
               <img 
-                src="https://i.ibb.co/SXvJxL5x/Whats-App-Image-2026-09-17-at-2-58-19-PM.jpg" 
+                src="https://raw.githubusercontent.com/easybyzcreator/imagens/7695f8348fd3705d57b106f8eed779cf16e9fa56/WhatsApp%20Image%202026-09-17%20at%202.58.19%20PM.jpeg" 
                 alt="Bay Park Flat Hotel - Lazer e Área Externa" 
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
@@ -968,7 +958,7 @@ function renderSlideContent(
                 {/* Screenshot inside Phone */}
                 <div className="relative w-full aspect-[9/18.5] rounded-[24px] sm:rounded-[30px] overflow-hidden bg-slate-900 border border-slate-800">
                   <img 
-                    src="https://i.ibb.co/BHBZTzG8/Whats-App-Image-2026-09-02-at-11-01-24-AM.jpg" 
+                    src="https://raw.githubusercontent.com/easybyzcreator/imagens/7695f8348fd3705d57b106f8eed779cf16e9fa56/capa%20app%20bsb.jpeg" 
                     alt="Modelo do App Guia de Bolso" 
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover object-top"
@@ -998,8 +988,8 @@ function renderSlideContent(
             {/* Left Image */}
             <div className="col-span-1 md:col-span-5 h-44 sm:h-56 md:h-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg border border-slate-200 group">
               <img 
-                src="https://i.ibb.co/d4g7knWp/IMG-20260820-WA0043.jpg" 
-                alt="Formação Jurídica & Cidadania" 
+                src="https://raw.githubusercontent.com/easybyzcreator/imagens/7695f8348fd3705d57b106f8eed779cf16e9fa56/externa%20stf%20bsb.jpeg" 
+                alt="Formação Jurídica & Cidadania no STF" 
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
               />
@@ -1263,17 +1253,17 @@ function renderSlideContent(
               </div>
             </div>
 
-            {/* Right Visual Image - Maria Lúcia Rodrigues */}
+            {/* Right Visual Image - Ministérios */}
             <div className="col-span-1 md:col-span-5 rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg border-2 border-slate-200 bg-slate-950 group relative flex flex-col justify-end min-h-[180px] sm:min-h-[240px] md:min-h-[280px]">
               <img 
-                src="https://i.ibb.co/whXWtsWs/IMG-20260818-WA0552.jpg" 
-                alt="Maria Lúcia Rodrigues na Câmara dos Deputados" 
+                src="https://raw.githubusercontent.com/easybyzcreator/imagens/7695f8348fd3705d57b106f8eed779cf16e9fa56/bsb%20-%20ministerios.jpeg" 
+                alt="Brasília - Ministérios" 
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-center absolute inset-0 transition-transform duration-500 group-hover:scale-105"
               />
               <div className="relative z-10 bg-linear-to-t from-black/95 via-black/80 to-transparent p-2.5 sm:p-3.5 text-white">
                 <p className="text-[10px] sm:text-[11px] leading-snug font-medium text-slate-100 drop-shadow-sm">
-                  Visita à Comissão de Cultura da Câmara dos Deputados e conversa sobre os processos legislativos
+                  Brasília — Esplanada dos Ministérios e espaços centrais da República
                 </p>
               </div>
             </div>
@@ -1330,7 +1320,7 @@ function renderSlideContent(
                 <div className="flex items-center gap-3">
                   <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-[#f59532] shrink-0 shadow-xs bg-slate-100 group-hover:scale-105 transition-transform">
                     <img 
-                      src="https://i.ibb.co/N28G3fQS/paulo.jpg" 
+                      src="https://raw.githubusercontent.com/easybyzcreator/imagens/7695f8348fd3705d57b106f8eed779cf16e9fa56/paulo.jpg" 
                       alt="Paulo Kroeff" 
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover object-center"
@@ -1357,7 +1347,7 @@ function renderSlideContent(
                 <div className="flex items-center gap-3">
                   <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-[#083904] shrink-0 shadow-xs bg-slate-100 group-hover:scale-105 transition-transform">
                     <img 
-                      src="https://i.ibb.co/1GjgTw22/patiii.jpg" 
+                      src="https://raw.githubusercontent.com/easybyzcreator/imagens/7695f8348fd3705d57b106f8eed779cf16e9fa56/patiii.jpg" 
                       alt="Pati Guimarães" 
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover object-center"

@@ -8,14 +8,14 @@ export const EasyByzCreatorLogo = ({ className = "h-8" }: { className?: string }
     className="inline-flex flex-col items-center group transition-transform hover:scale-105"
     title="Visitar EasyByzCreator (easybyzcreator.com)"
   >
-    <span className="text-[9px] uppercase tracking-wider text-slate-400 font-medium mb-1 group-hover:text-[#f59532] transition-colors">
+    <span className="text-[9px] uppercase tracking-wider text-slate-300 font-semibold mb-1 group-hover:text-white transition-colors">
       desenvolvido por
     </span>
     <img
-      src="https://i.ibb.co/TqMvVmyt/logo-easybyzcreator.png"
+      src="https://raw.githubusercontent.com/easybyzcreator/imagens/7695f8348fd3705d57b106f8eed779cf16e9fa56/logo%20easy%20byz%20-%20fundo%20transparente.png"
       alt="EasyByzCreator"
       referrerPolicy="no-referrer"
-      className={`${className} object-contain transition-opacity group-hover:opacity-90 drop-shadow-sm`}
+      className={`${className} object-contain transition-opacity group-hover:opacity-100 brightness-0 invert drop-shadow-sm`}
     />
   </a>
 );

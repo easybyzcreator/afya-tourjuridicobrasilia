@@ -214,7 +214,7 @@ export default function App() {
       <header className="px-3 sm:px-4 py-2 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 flex items-center justify-between z-20 print:hidden">
         <div className="flex items-center">
           <span className="text-xs sm:text-sm font-black tracking-wide text-white">
-            Tour Jurídico Brasília - AFYA
+            AFYA
           </span>
         </div>
 
