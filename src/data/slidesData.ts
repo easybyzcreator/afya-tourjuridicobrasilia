@@ -194,12 +194,10 @@ export const SLIDES_DATA: SlideItem[] = [
     category: 'Pagamento Saldo',
     type: 'payment_code',
     content: [
-      'você receberá um código referente ao número da viagem',
-      'acesse o site www.universoludico.com.br',
-      'entre na área do aluno e insira o código.',
-      'siga as etapas até concluir a compra de forma fácil e segura!'
+      'você receberá uma mensagem com um link',
+      'Acesse o link, siga as etapas e faça sua inscrição completa e pagamento.'
     ],
-    notes: 'Passo a passo para pagar o saldo da viagem em até 12x no cartão de crédito. Código da Viagem XXXXXX. Atenção! Todo o processo de inscrição precisa ser feito em até 24h após o pagamento da taxa de reserva.'
+    notes: 'Passo a passo para pagar o saldo da viagem em até 12x no cartão de crédito através do link enviado por mensagem. Atenção! Todo o processo de inscrição precisa ser feito em até 24h após o pagamento da taxa de reserva.'
   },
   {
     id: 18,

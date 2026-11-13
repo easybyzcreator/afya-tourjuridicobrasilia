@@ -1063,7 +1063,7 @@ function renderSlideContent(
                   <div className="font-bold flex items-center gap-1">
                     <span>🚌 saída domingo ao final da tarde</span>
                   </div>
-                  <div className="text-slate-900 font-bold">4 dias / 3 noites / 3 dias de atividades</div>
+                  <div className="text-slate-900 font-bold">4 dias / 3 noites / 2 dias de atividades</div>
                 </div>
               </div>
             </div>
@@ -1087,7 +1087,7 @@ function renderSlideContent(
               </h2>
               <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mt-1">
                 <span className="text-[10px] sm:text-xs font-bold text-[#083904] bg-emerald-100/90 border border-emerald-300/60 px-2.5 py-0.5 rounded-full whitespace-nowrap">
-                  📅 DATA DA VIAGEM: <strong>a definir</strong>
+                  📅 DATA DA VIAGEM: <strong>11 a 14 de abril de 2027</strong>
                 </span>
               </div>
             </div>
@@ -1179,46 +1179,17 @@ function renderSlideContent(
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 my-auto items-stretch py-2">
-            {/* Steps & Code */}
-            <div className="col-span-1 md:col-span-7 flex flex-col justify-between space-y-2.5 sm:space-y-3">
-              {/* Código XXXXXX */}
-              <div className="bg-[#083904] text-white px-4 sm:px-6 py-2.5 sm:py-3.5 rounded-xl sm:rounded-2xl shadow-md flex items-center justify-between gap-3 border border-emerald-700/40">
-                <span className="text-xs sm:text-sm md:text-base font-bold text-emerald-200 tracking-wide uppercase">
-                  Código da Viagem
-                </span>
-                <span className="text-xl sm:text-2xl md:text-3xl font-black tracking-widest text-[#f59532]">
-                  XXXXXX
-                </span>
-              </div>
-
-              {/* 4 Passos Solicitados */}
-              <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-slate-700 bg-slate-50 p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl border border-slate-200">
-                <div className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#083904] shrink-0 mt-0.5" />
-                  <span>você receberá um código referente ao número da viagem</span>
+            {/* Steps */}
+            <div className="col-span-1 md:col-span-7 flex flex-col justify-center space-y-3 sm:space-y-4">
+              {/* 2 Passos Solicitados */}
+              <div className="space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-slate-700 bg-slate-50 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200">
+                <div className="flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-[#083904] shrink-0 mt-0.5" />
+                  <span>você receberá uma mensagem com um link</span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#083904] shrink-0 mt-0.5" />
-                  <span>
-                    acesse o site{' '}
-                    <a 
-                      href="https://www.universoludico.com.br" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="font-bold text-[#083904] underline hover:text-[#f59532] inline-flex items-center gap-0.5"
-                    >
-                      www.universoludico.com.br
-                      <ExternalLink className="w-3 h-3 inline" />
-                    </a>
-                  </span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#083904] shrink-0 mt-0.5" />
-                  <span>entre na <strong>área do aluno</strong> e insira o código.</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#083904] shrink-0 mt-0.5" />
-                  <span>siga as etapas até <strong>concluir a compra</strong> de forma fácil e segura!</span>
+                <div className="flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-[#083904] shrink-0 mt-0.5" />
+                  <span>Acesse o link, siga as etapas e faça sua inscrição completa e pagamento.</span>
                 </div>
               </div>
 
@@ -1247,8 +1218,7 @@ function renderSlideContent(
             </div>
           </div>
 
-          <div className="flex items-center justify-between text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-100">
-            <span>[ LGPD ] Procedimentos em conformidade com a LGPD</span>
+          <div className="flex items-center justify-end text-[10px] sm:text-[11px] text-slate-400 pt-2 border-t border-slate-100">
             <PatiTourLogo className="h-4 sm:h-5" />
           </div>
         </div>
