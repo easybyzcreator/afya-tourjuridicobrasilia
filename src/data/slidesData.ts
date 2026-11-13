@@ -48,14 +48,12 @@ export const SLIDES_DATA: SlideItem[] = [
     category: 'Experiências',
     type: 'experiences',
     bullets: [
-      'Congresso Nacional, gabinetes e comissões',
-      'Palácio Itamaraty e Instituto Rio Branco',
-      'Reunião do Pleno do STF - Supremo Tribunal Federal',
-      'Visita guiada ao Conselho Federal da OAB - Ordem dos Advogados do Brasil',
-      'Visita guiada e Sessão do TSE - Tribunal Superior Eleitoral',
-      'Brasília para além dos edifícios do poder, com Memorial JK, Catedral Metropolitana e Vila Planalto'
+      'STJ - Superior Tribunal de Justiça',
+      'Conselho Federal da OAB - Ordem dos Advogados do Brasil',
+      'CNJ - Conselho Nacional de Justiça',
+      'STF - Supremo Tribunal Federal, sessão de uma das Turmas'
     ],
-    notes: 'Passar pelos 6 pilares de vivência: Congresso, Itamaraty, Sessão STF, OAB, TSE e Cultura/História com Memorial JK.'
+    notes: 'Passar pelos 4 pilares de vivência: STJ, OAB, CNJ e STF.'
   },
   {
     id: 6,
@@ -84,17 +82,22 @@ export const SLIDES_DATA: SlideItem[] = [
     category: 'Jornada Jurídica',
     type: 'day_detail',
     bullets: [
-      'Praça dos Três Poderes e Panteão dos Heróis da Nação',
-      'Almoço no Congresso, no Restaurante Taioba, inserindo o grupo no ambiente institucional desde a chegada',
-      'Visita ao Congresso Nacional, apresentando o Poder Legislativo, seu funcionamento, as comissões e gabinetes parlamentares',
-      'Encerramento das atividades, chegada e acomodação no Bay Park Flat Hotel'
+      'Parada no trajeto para café da manhã',
+      'Chegada em Brasília e início das atividades do dia',
+      'STJ - Superior Tribunal de Justiça - visita institucional guiada',
+      'Almoço no Restaurante Tia Zélia - Vila Planalto',
+      'CNJ - Conselho Nacional de Justiça - visita institucional guiada',
+      'Pôr do Sol no Pontão Sul',
+      'Chegada e acomodação no Bay Park Flats',
+      'Jantar no Brasília Shopping',
+      'Retorno para o Bay Park Flats'
     ],
     options: [
       'Ida de ônibus até o shopping próximo, com retorno coletivo após 1h30',
       'Refeição por delivery no hotel',
       'Autonomia para sair, jantar e retornar por conta própria'
     ],
-    notes: 'Detalhes do Dia 1 (12 de abril): Almoço no Taioba, visita guiada ao Congresso Nacional e check-in no Bay Park Flat Hotel.'
+    notes: 'Detalhes do Dia 1 (12 de abril): STJ, almoço no Tia Zélia, CNJ, Pôr do Sol no Pontão Sul e check-in no Bay Park Flats.'
   },
   {
     id: 9,
@@ -104,34 +107,15 @@ export const SLIDES_DATA: SlideItem[] = [
     category: 'Jornada Jurídica',
     type: 'day_detail',
     bullets: [
-      'Visita ao Palácio Itamaraty, sede do Ministério das Relações Exteriores, ampliando a percepção do grupo sobre a dimensão diplomática do Estado brasileiro',
-      'Almoço no Restaurante-Escola do SENAC, no 10º andar do Anexo IV da Câmara',
-      'Visita ao Instituto Rio Branco, sede da Escola de Diplomacia brasileira',
-      'Memorial Juscelino Kubitschek, fundador de Brasília',
-      'Encerramento das atividades do dia no TSE - Tribunal Superior Eleitoral, aproximando o grupo do papel da Justiça Eleitoral no processo democrático brasileiro'
-    ],
-    options: [
-      'Ida de ônibus até o shopping próximo, com retorno coletivo após 1h30',
-      'Refeição por delivery no hotel',
-      'Autonomia para sair, jantar e retornar por conta própria'
-    ],
-    notes: 'Detalhes do Dia 2 (13 de abril): Palácio Itamaraty, almoço no SENAC Anexo IV, Instituto Rio Branco, Memorial JK e Tribunal Superior Eleitoral (TSE).'
-  },
-  {
-    id: 10,
-    title: 'Cidade, advocacia e Suprema Corte',
-    dayNumber: '03',
-    dayLabel: 'dia 3 de atividade - 14 de abril',
-    category: 'Jornada Jurídica',
-    type: 'day_detail',
-    bullets: [
-      'Visita à Catedral Metropolitana de Brasília, apresentando a cidade também por sua dimensão urbana, estética e monumental',
-      'Visita ao Conselho Federal da OAB - Ordem dos Advogados do Brasil, aproximando o grupo de uma instituição central para a história e a prática da advocacia no país',
-      'Almoço no Restaurante Tia Zélia, na Vila Planalto, conectando a experiência à memória dos candangos e a um território político tradicional da capital',
-      'Acompanhamento de reunião do pleno do STF - Supremo Tribunal Federal, permitindo observar ritos, linguagem e funcionamento da mais alta Corte do país'
+      'Café da manhã no Bay Park Flats',
+      'Conselho Federal da OAB - Ordem dos Advogados do Brasil - visita institucional guiada',
+      'Almoço no Restaurante Taioba - Anexo 3 da Câmara dos Deputados',
+      'STF - Supremo Tribunal Federal - Sessão de Turma',
+      'Encerramento da viagem em espaço público',
+      'Partida de Brasília para Montes Claros'
     ],
     options: [],
-    notes: 'Detalhes do Dia 3 (14 de abril): Catedral, Conselho Federal da OAB, Tia Zélia na Vila Planalto, reunião do pleno do STF e encerramento.'
+    notes: 'Detalhes do Dia 2 (13 de abril): Conselho Federal da OAB, almoço no Restaurante Taioba, STF - Sessão de Turma e partida para Montes Claros.'
   },
   {
     id: 11,
@@ -141,8 +125,8 @@ export const SLIDES_DATA: SlideItem[] = [
     bullets: [
       'Transporte ida e volta, saindo de Montes Claros para Brasília',
       'Hospedagem no Bay Park Flat Hotel em quarto quádruplo',
-      'Café da manhã nos dias 12, 13 e 14 de abril',
-      'Almoço nos dias 12, 13 e 14 de abril',
+      'Café da manhã nos dias 12 e 13 de abril',
+      'Almoço nos dias 12 e 13 de abril',
       'Educadores da Universo Lúdico com experiência em Brasília',
       'Guia local com Cadastur',
       'City tour guiado - todos os dias',
@@ -154,7 +138,7 @@ export const SLIDES_DATA: SlideItem[] = [
       'Jantares nos dias 11, 12, 13 e 14 de abril',
       'Despesas pessoais e com alimentação durante o traslado ida e volta de ônibus'
     ],
-    notes: 'Pacote completo: transporte ida e volta saindo de Montes Claros para Brasília, hotel, café da manhã nos dias 12, 13 e 14 de abril, almoço nos dias 12, 13 e 14 de abril, city tour guiado todos os dias, seguro e guias cadastrados.'
+    notes: 'Pacote completo: transporte ida e volta saindo de Montes Claros para Brasília, hotel, café da manhã nos dias 12 e 13 de abril, almoço nos dias 12 e 13 de abril, city tour guiado todos os dias, seguro e guias cadastrados.'
   },
   {
     id: 12,
@@ -194,14 +178,14 @@ export const SLIDES_DATA: SlideItem[] = [
     title: 'INVESTIMENTO e condições de adesão',
     category: 'Investimento',
     type: 'investment',
-    notes: 'Período de adesão: a definir. Taxa de inscrição R$ 150 à vista no Pix. Investimento (11 a 14 de abril de 2027): 12x R$ 284,20.'
+    notes: 'Período de adesão: a definir. Taxa de inscrição R$ 150 à vista no Pix. Investimento (11 a 14 de abril de 2027): 12x R$ 247,84.'
   },
   {
     id: 16,
     title: 'Como fazer sua reserva',
     category: 'Passo a Passo Reserva',
     type: 'reservation_steps',
-    notes: 'Etapas da reserva: Taxa R$ 150 após reunião (30 interessados). Encerramento das vagas. Limite máximo de 57 participantes.'
+    notes: 'Etapas da reserva: Taxa R$ 150 após reunião (30 interessados). Encerramento das vagas. Limite máximo de 30 participantes.'
   },
   {
     id: 17,

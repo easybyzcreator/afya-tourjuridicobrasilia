@@ -487,7 +487,7 @@ function renderSlideContent(
             <span className="text-xs font-bold text-[#083904] bg-[#083904]/10 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl">4 Dias / 3 Noites</span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6 my-auto py-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto w-full my-auto py-2">
             {/* DIA 1 - Congresso Nacional */}
             <div className="bg-white p-3.5 sm:p-4 md:p-5 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-[#f59532] transition-colors group">
               <div>
@@ -506,39 +506,16 @@ function renderSlideContent(
                   </div>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
-                  Praça dos Três Poderes, Panteão dos Heróis da Nação, almoço no restaurante Taioba, visita ao Congresso Nacional, gabinetes e comissões
+                  STJ - Superior Tribunal de Justiça - visita institucional guiada, Almoço no Restaurante Tia Zélia - Vila Planalto, CNJ - Conselho Nacional de Justiça - visita institucional guiada, Pôr do Sol no Pontão Sul
                 </p>
               </div>
             </div>
 
-            {/* DIA 2 - Palácio Itamaraty / Catedral */}
+            {/* DIA 2 - Conselho Federal da OAB */}
             <div className="bg-white p-3.5 sm:p-4 md:p-5 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-[#f59532] transition-colors group">
               <div>
                 <span className="bg-[#083904] text-white font-extrabold text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full inline-block mb-2 sm:mb-3">
                   dia 2 de atividade - 13 de abril
-                </span>
-                <div className="h-24 sm:h-28 md:h-32 rounded-xl sm:rounded-2xl overflow-hidden shadow-md relative mb-2 sm:mb-3">
-                  <img 
-                    src="https://raw.githubusercontent.com/easybyzcreator/imagens/7695f8348fd3705d57b106f8eed779cf16e9fa56/catedral%20bsb.jpg" 
-                    alt="Catedral Metropolitana" 
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" 
-                  />
-                  <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent flex items-end p-2 sm:p-2.5">
-                    <span className="text-[11px] sm:text-xs font-bold text-white">Catedral Metropolitana</span>
-                  </div>
-                </div>
-                <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
-                  Palácio Itamaraty, Instituto Rio Branco, almoço no Restaurante-Escola do SENAC, Memorial JK e TSE - Tribunal Superior Eleitoral
-                </p>
-              </div>
-            </div>
-
-            {/* DIA 3 - Conselho Federal da OAB */}
-            <div className="bg-white p-3.5 sm:p-4 md:p-5 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-[#f59532] transition-colors group">
-              <div>
-                <span className="bg-[#083904] text-white font-extrabold text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full inline-block mb-2 sm:mb-3">
-                  dia 3 de atividade - 14 de abril
                 </span>
                 <div className="h-24 sm:h-28 md:h-32 rounded-xl sm:rounded-2xl overflow-hidden shadow-md relative mb-2 sm:mb-3">
                   <img 
@@ -552,7 +529,7 @@ function renderSlideContent(
                   </div>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
-                  Catedral Metropolitana, visita guiada ao Conselho Federal da OAB - Ordem dos Advogados do Brasil, almoço no Tia Zélia, sessão do pleno do STF - Supremo Tribunal Federal e retorno
+                  Conselho Federal da OAB - Ordem dos Advogados do Brasil - visita institucional guiada, Almoço no Restaurante Taioba - Anexo 3 da Câmara dos Deputados, STF - Supremo Tribunal Federal - Sessão de Turma
                 </p>
               </div>
             </div>
@@ -585,7 +562,7 @@ function renderSlideContent(
           {/* Body Columns */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 my-auto items-start py-2">
             {/* Left Main Itinerary */}
-            <div className={`space-y-2.5 sm:space-y-3 ${slide.options && slide.options.length > 0 ? 'col-span-1 md:col-span-7' : 'col-span-1 md:col-span-12 max-w-4xl'}`}>
+            <div className={`${(slide.bullets?.length ?? 0) > 6 ? 'space-y-1.5 sm:space-y-2' : 'space-y-2.5 sm:space-y-3'} ${slide.options && slide.options.length > 0 ? 'col-span-1 md:col-span-7' : 'col-span-1 md:col-span-12 max-w-4xl'}`}>
               {slide.bullets?.map((b, idx) => (
                 <div key={idx} className="flex items-start gap-2.5 text-slate-700 text-xs sm:text-sm leading-relaxed">
                   <div className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-[#f59532] shrink-0 mt-1.5"></div>
@@ -850,7 +827,7 @@ function renderSlideContent(
               </div>
             </div>
             <span className="text-[10px] sm:text-[11px] font-bold text-[#f59532] bg-emerald-950/80 px-2.5 sm:px-3 py-1 rounded-lg border border-emerald-700/50 shrink-0 self-start sm:self-auto">
-              café da manhã incluso (12, 13 e 14 de abril)
+              café da manhã incluso (12 e 13 de abril)
             </span>
           </div>
         </div>
@@ -1081,7 +1058,7 @@ function renderSlideContent(
                   <span className="text-[10px] sm:text-xs uppercase font-black tracking-wider text-amber-950">VALOR INDIVIDUAL</span>
                   <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-wider bg-amber-950/20 text-slate-950 px-2 py-0.5 rounded-md">11 a 14 de abril de 2027</span>
                 </div>
-                <span className="text-2xl sm:text-3xl font-black text-slate-950 block tracking-tight">12x R$ 284,20</span>
+                <span className="text-2xl sm:text-3xl font-black text-slate-950 block tracking-tight">12x R$ 247,84</span>
                 <div className="mt-1.5 space-y-0.5 text-[11px] sm:text-xs font-semibold text-slate-950 border-t border-amber-600/30 pt-1.5 leading-tight">
                   <div className="font-bold flex items-center gap-1">
                     <span>🚌 saída domingo ao final da tarde</span>
@@ -1149,17 +1126,17 @@ function renderSlideContent(
 
               <div className="text-[10px] sm:text-[11px] text-slate-800 bg-amber-50/90 p-2 sm:p-2.5 rounded-xl border border-amber-300/80 leading-relaxed">
                 <strong className="text-[#c76e14] block mb-0.5">Observação:</strong>
-                A viagem considera um grupo <strong>mínimo de 30 participantes</strong>, condição necessária para manter o valor apresentado, já que parte dos custos é coletiva e precisa ser dividida entre o grupo. O limite máximo é de <strong>57 participantes</strong>, pois, somados à equipe técnica, professores convidados e guia local, o grupo atinge a lotação total do ônibus.
+                A viagem considera um grupo <strong>mínimo de 30 participantes</strong>, condição necessária para manter o valor apresentado, já que parte dos custos é coletiva e precisa ser dividida entre o grupo. O limite máximo é de <strong>30 participantes</strong>, pois, somados à equipe técnica, professores convidados e guia local, o grupo atinge a lotação total do ônibus.
               </div>
             </div>
 
             {/* Right Card - Sem link direcionando */}
             <div className="col-span-1 md:col-span-5 flex flex-col justify-between bg-amber-50/80 p-3.5 sm:p-5 rounded-2xl sm:rounded-3xl border-2 border-[#f59532]/60 shadow-md text-center">
-              {/* Warning SOMENTE 57 VAGAS */}
+              {/* Warning SOMENTE 30 VAGAS */}
               <div className="space-y-1 sm:space-y-1.5">
                 <div className="inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#f59532] text-slate-950 px-3 sm:px-5 py-1.5 sm:py-2 rounded-xl sm:rounded-2xl font-black text-xs sm:text-sm md:text-base shadow-md uppercase tracking-wider w-full">
                   <Flame className="w-4 h-4 sm:w-5 sm:h-5 text-slate-950 fill-slate-950" />
-                  <span>SOMENTE 57 VAGAS!</span>
+                  <span>SOMENTE 30 VAGAS!</span>
                 </div>
                 <p className="text-[11px] sm:text-xs text-slate-700 font-medium pt-0.5">
                   Garanta a sua vaga na Viagem Acadêmica Oficial a Brasília antes do encerramento das inscrições.

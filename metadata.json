@@ -1,8 +1,6 @@
 {
-  "name": "Tour juridico Brasília - AFYA",
-  "description": "Apresentação e guia interativo do Tour Jurídico em Brasília (DF) para estudantes de Direito.",
+  "name": "Viagem Acadêmica AFYA - Brasília DF",
+  "description": "Apresentação oficial da Viagem Pedagógica e Acadêmica de Direito para Brasília - DF (AFYA, Universo Lúdico e PatiTour).",
   "requestFramePermissions": [],
-  "majorCapabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
-  ]
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
